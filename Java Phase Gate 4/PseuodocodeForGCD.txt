@@ -1,0 +1,25 @@
+Inputs: num1 = 48, num2 = 18
+
+Iteration 1:
+
+temp = 18
+
+num2 = 48 % 18 = 12
+
+num1 = 18
+
+Iteration 2:
+
+temp = 12
+
+num2 = 18 % 12 = 6
+
+num1 = 12
+
+Iteration 3:
+
+temp = 6
+
+num2 = 12 % 6 = 0
+
+num1 = 6
