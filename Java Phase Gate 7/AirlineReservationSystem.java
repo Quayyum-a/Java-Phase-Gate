@@ -69,13 +69,13 @@ public class AirlineReservationSystem {
     }
     
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println(getHeading());
         
         
         while (!isPlaneFull()) {
             System.out.println("Please type 1 for First Class and Please type 2 for Economy. (Type 3 to Exit)");
-            int choice = sc.nextInt();
+            int choice = scanner.nextInt();
             try {
                 getChoice(choice); 
             } catch (IllegalArgumentException ex) {
@@ -89,7 +89,7 @@ public class AirlineReservationSystem {
                         System.out.println(getFirstClass());
                     } else if (!isEconomyClassFull()) {
                         System.out.println("First class is full. Is it acceptable to be placed in Economy? (y/n)");
-                        char response = sc.next().charAt(0);
+                        char response = scanner.next().charAt(0);
                         if (response == 'y' || response == 'Y') {
                             System.out.println(getEconomyClass());
                         } else {
@@ -105,7 +105,7 @@ public class AirlineReservationSystem {
                         System.out.println(getEconomyClass());
                     } else if (!isFirstClassFull()) {
                         System.out.println("Economy class is full. Is it acceptable to be placed in First Class? (y/n)");
-                        char response = sc.next().charAt(0);
+                        char response = scanner.next().charAt(0);
                         if (response == 'y' || response == 'Y') {
                             System.out.println(getFirstClass());
                         } else {
@@ -118,7 +118,6 @@ public class AirlineReservationSystem {
 
                 case 3: 
                     System.out.println("Exiting... Next flight leaves in 3 hours.");
-                    sc.close();
                     return;
 
                 default:
