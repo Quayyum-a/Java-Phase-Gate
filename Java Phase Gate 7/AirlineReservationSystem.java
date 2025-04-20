@@ -1,4 +1,4 @@
-import java.util.Random;
+
 import java.util.Scanner;
 
 public class AirlineReservationSystem {
@@ -20,7 +20,7 @@ public class AirlineReservationSystem {
 
     public static String getFirstClass() {
         
-        for (int count = 0; count <= 5; count++) {
+        for (int count = 0; count < 5; count++) {
             if (!planeSeats[count]) {
                 planeSeats[count] = true;
                 return "Thank you, you have successfully booked a First class seat and your seat number is No: " + (count + 1);
@@ -41,7 +41,7 @@ public class AirlineReservationSystem {
     }
     
     public static boolean isFirstClassFull() {
-        for (int count = 1; count <= 5; count++) {
+        for (int count = 0; count < 5; count++) {
             if (!planeSeats[count]) {
                 return false;
             }
